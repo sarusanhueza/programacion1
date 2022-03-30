@@ -14,13 +14,31 @@ dni: 8888
 direccion: arenales`)
 
 }
-
 //condicionales
 function validar() {
-    const calificacion = prompt('ingrese su calificacion');
+    const calificacion = prompt('INGRESE SU CALIFICACION');
+   /* forma-1
     if(calificacion >= 7){
          alert('estas aprobado')
     } else{
         alert ('nos vemos en diciembre')
-    }
+    }*/
+    
+    //forma-2  terneario
+    (calificacion>=7)? alert ('ESTAS APROBADO'): alert('ESTAS DESAPROBADO')          
+
+
+
+}
+
+//funcion con retorno y comunicacion entre funciones
+function calcular() {
+   const number = prompt('ingresa un numero:');
+   const resultado = number*10
+   return resultado
+
+}
+function visualizar() {
+const respuesta = calcular()
+alert (respuesta) 
 }
