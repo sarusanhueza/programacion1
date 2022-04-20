@@ -53,6 +53,7 @@ console.log (series)
 let copia = series.slice()
 copia.push("dragon ball")
 console.log(series)
+console.log(copia)
 
 
 
