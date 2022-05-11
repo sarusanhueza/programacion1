@@ -1,13 +1,15 @@
-function hipotenuza(){
-    const n1 = prompt ('ingrese valor a');
-    const n2 = prompt ('ingrese valor b');
-    const n3 = prompt ('ingrese valor c');
- 
-    const resultado = n3= math.sqrt(math.pow(n2)+math.pow(n1))
-    return resultado 
+function hipotenuza(d1,d2){
+    const primero = Math.pow(d1,2) + Math.pow(d2,2)
+    const segundo = Math.sqrt(primero)
+    return segundo
 }
-function mostrar() {
-    const resultado = hipotenuza()
-    alert ('El resultado de la hipotenuza es: '+resultado)
-    
+
+function mostrar(){
+    const d1 = document.getElementById ("a").value
+    const d2 = document.getElementById ("b").value
+    const segundo = hipotenuza(d1,d2)
+    document.getElementById ("h_resultado").textContent = segundo
 }
+const boton = document.getElementById ("presionar")
+
+boton.addEventListener("click",mostrar)
