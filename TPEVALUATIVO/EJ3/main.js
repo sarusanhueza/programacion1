@@ -5,11 +5,11 @@ function hipotenuza(d1,d2){
 }
 
 function mostrar(){
-    const d1 = document.getElementById ("a").value
-    const d2 = document.getElementById ("b").value
+    const d1 = document.getElementById("a").value
+    const d2 = document.getElementById("b").value
     const segundo = hipotenuza(d1,d2)
-    document.getElementById ("h_resultado").textContent = segundo
+    document.getElementById("h_resultado").textContent = segundo.toFixed(2)
 }
-const boton = document.getElementById ("presionar")
+const boton = document.getElementById("presionar")
 
 boton.addEventListener("click",mostrar)

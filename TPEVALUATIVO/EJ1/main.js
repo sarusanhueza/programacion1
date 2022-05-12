@@ -4,7 +4,7 @@ function calcular (){
    const f2 =1950000
    const f3 =2650000
     let resultado = null
-    if (s==1){resultado = 1750000 - ((f1*5)/100)
+    if (s==1){resultado = f1 - ((f1*5)/100)
     } else {
         if (s==2){
           resultado = 1950000 - ((f2*10)/100)
