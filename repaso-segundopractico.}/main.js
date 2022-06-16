@@ -28,11 +28,17 @@ boton.addEventListener("click",imprimir)
 
 
 function generar(){
-
-    consolas.forEach(element => {
-      
+let fila = []
+    consolas.forEach((element,index) => {
+      let filita = 
+     ` <tr>
+          <td>${index+1}</td>
+          <td>${element}</td>
+      </tr>`
+      fila.push(filita)
         
     });
+    document.getElementById("tablass_").innerHTML = fila.join('')
 
 }
 const cosita = document.getElementById('cossita')
