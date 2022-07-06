@@ -16,3 +16,10 @@ function listar(){
     producto.obtener_productos()
 }
 listar()
+
+function eliminar(){
+    let producto = new Producto
+    producto.eliminar_producto()
+    
+}
+document.getElementById("elino").addEventListener("clik",eliminar)

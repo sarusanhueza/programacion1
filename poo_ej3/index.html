@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UnDocumentoMas</title>
     <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="bootstrap.bundle.min.js"></script>
 </head>
 <body>
     <nav class="navbar" style="background-color:rgb(17, 149, 112)">
@@ -37,12 +39,11 @@
                 <table class="table table-success">
                     <thead>
                         <tr>
-                            <th>N°
-
-                            </th>
+                            <th>N°</th>
                             <th>Descripcion</th>
                             <th>Precio de venta</th>
                             <th>Categoria</th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody id="tb">
@@ -54,9 +55,28 @@
             </div>
         </div>
     </div>
+
+      <div id="mymodal" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Eliminaciones</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>¿Estas segura/o de ralizar esta accion?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button id="elino" type="button" class="btn btn-danger">Eliminar</button>
+            </div>
+          </div>
+        </div>
+      </div>
     
 
 
     <script src="main.js" type="module"></script>
+    <script src="auxiliar.js"></script>
 </body>
 </html>
