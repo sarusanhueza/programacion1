@@ -50,6 +50,9 @@ export default class Producto {
                         <button onclick="almacenar_indice(${index})" data-bs-toggle="modal" data-bs-target="#mymodal" class="btn btn-danger btn-sm">
                             <i class="fa fa-trash"></i>
                         </button>
+                        <button onclick = "editar_formulario(${index})" class = "btn btn-primary btn-sm">
+                        <i class="fa fa-edit"></i>
+                        </button>
                     </td>
 
                 </tr>`
@@ -66,6 +69,20 @@ export default class Producto {
        lista_productos.splice(indice,1)
        localStorage.setItem("produccto", JSON.stringify(lista_productos))
        this.obtener_productos()
+    }
+
+    acualizar_producto(){
+        let indice = localStorage.getItem("indice")
+        let lista_productos = JSON.parse (localStorage.getItem("produccto"))
+        lista_productos[indice].Descripcion = document.getElementById("Descripcion").value
+        lista_productos[indice].Precio = document.getElementById("Precio").value
+        lista_productos[indice].Categoria = document.getElementById("select").value
+
+        localStorage.setItem("produccto", JSON.stringify(lista_productos))
+        this.obtener_productos()
+        document.getElementById("bon").style.display = "block"
+        document.getElementById("bon2").style.display = "none"
+
     }
 
 

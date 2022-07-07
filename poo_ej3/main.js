@@ -24,3 +24,9 @@ function eliminar(){
     
 }
 document.getElementById("elino").addEventListener("click",eliminar)
+
+function actualizar(){
+    let producto = new Producto()
+    producto.acualizar_producto()
+} 
+document.getElementById("bon2").addEventListener("click", actualizar)
