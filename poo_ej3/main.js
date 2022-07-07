@@ -18,8 +18,9 @@ function listar(){
 listar()
 
 function eliminar(){
-    let producto = new Producto
-    producto.eliminar_producto()
+    let indice = localStorage.getItem("indice")
+    let producto = new Producto()
+    producto.eliminar_producto(indice)
     
 }
-document.getElementById("elino").addEventListener("clik",eliminar)
+document.getElementById("elino").addEventListener("click",eliminar)
