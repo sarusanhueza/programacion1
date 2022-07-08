@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tpEvalativo3</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap.bundle.min.js">
+</head>
+<body>
+    <nav class="navbar" style="background-color:rgb(41, 40, 40)">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1" style="color:azure">MUSICA </span>
+        </div>
+    </nav>
+
+<div class="container mt-3">
+        <div class="row">
+            <div class="col-lg-4">
+                <form id="vaciar">
+                <div class="mb-4">
+                    <input id="D" class="form-control" placeholder="Descripcion del articulo" type="text"></div>
+                <div class="mb-4">
+                    <input id="P" class="form-control" placeholder="Precio" type="number"></div>
+                <div class="mb-4">
+                    <input id="I" class="form-control" placeholder="URL de la imagen" type="text"></div>
+                <div class="mb-4">
+                        <input id="d" class="form-control" placeholder="detalles" type="text"></div>
+                <div class="mb-4">
+                    <select id="S" class="form-select">
+                        <option selected>categorias</option>
+                        <option value="a">instrumentos</option>
+                        <option value="b">amplificadores</option>
+                        <option value="c">accesorios</option>
+                        <option value="d">estuches</option>
+                        <option value="e">usados</option>
+                      </select>
+                </div>
+                </form>
+            </div>
+            <div class="col-lg-8">
+                    <table class="table" style="background-color:rgb(41, 40, 40);">
+                        <thead>
+                            <tr>
+                                <th style="color:azure ;">N°</th>
+                                <th style="color:azure ;">Articulo</th>
+                                <th style="color:azure ;">Precio</th>
+                                <th style="color:azure ;">Imagen</th>
+                                <th style="color:azure ;">Detalles</th>
+                                <th style="color:azure ;">Categoria</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table" style="color:azure;"></tbody>
+                    </table>
+            </div>
+        </div>
+                <button id = "parche" type="button" class="btn btn-dark">Guardar</button>
+
+ </div>
+
+    <script src="main.js" type="module"></script>
+</body>
+</html>

@@ -10,6 +10,7 @@ export default class Producto {
 
     guardar_producto(){
 
+
         let new_product = {
             Descripcion : this.Descripcion,
             Precio : this.precio_venta,
@@ -28,6 +29,7 @@ export default class Producto {
         localStorage.setItem("produccto", JSON.stringify(lista))}
 
         this.obtener_productos()
+        this.vaciar_formulario()
     }
 
     /*recolectamos todos los productos alojados en el item "producctos" que estan en notacion json. 
@@ -72,6 +74,7 @@ export default class Producto {
     }
 
     acualizar_producto(){
+
         let indice = localStorage.getItem("indice")
         let lista_productos = JSON.parse (localStorage.getItem("produccto"))
         lista_productos[indice].Descripcion = document.getElementById("Descripcion").value
@@ -83,8 +86,13 @@ export default class Producto {
         document.getElementById("bon").style.display = "block"
         document.getElementById("bon2").style.display = "none"
 
+        this.vaciar_formulario()
+
     }
 
+    vaciar_formulario(){
+        document.getElementById("form_producto").reset()
+    }
 
 }
 
