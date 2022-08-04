@@ -5,7 +5,7 @@ function guardar(){
     let precio = document.getElementById("P").value
     let imagen = document.getElementById("I").value
     let detalles = document.getElementById("d").value
-    let categoria = document.getElementById("S").value
+    let categoria = document.getElementById("C").value
 
     let elementos = new Elementos(descripcion,precio,imagen,detalles,categoria)
     elementos.guardar_producto()
@@ -22,3 +22,10 @@ function obtener(){
     producto.obtener_productos()
 }
 obtener()
+
+function eliminar(){
+    let p = new Elementos()
+    p.eliminar_producto()
+}
+
+document.getElementById("bpton").addEventListener("click", eliminar)

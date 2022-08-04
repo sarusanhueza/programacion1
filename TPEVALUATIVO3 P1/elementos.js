@@ -50,10 +50,21 @@ export default class Elementos{
                     <td>${index+1}</td>
                     <td>${element.Descripcion}</td>
                     <td>${element.Precio}</td>
-                    <td>${element.Imagen}</td>
+                    <td>
+                    <img style="width:4rem" src="${element.Imagen}">
+                    </td>
                     <td>${element.Detalles}</td>
                     <td>${element.Categoria}</td>
-
+                    
+                    <td>
+                    <button onclick="almacenar_indice(${index})" data-bs-toggle="modal" data-bs-target="#MODAL" class="btn btn-danger btn-sm">
+                    <i class="fa fa-trash"></i>
+                </button>
+                <button onclick="editar(${index})" class= "btn btn-primary btn-sm"> 
+                <i class = "fa fa-edit"></i>
+                </button>
+                    </td>
+                        
                 </tr>`
                 filas.push(fila)
                 
@@ -63,9 +74,14 @@ export default class Elementos{
         
     }
 
+    eliminar_producto(){
+        let indice = localStorage.getItem("indice")
+        let lista_productos = JSON.parse(localStorage.getItem("elementillo"))
+        lista_productos.splice(indice,1)
+        localStorage.setItem("elementillo",JSON.stringify(lista_productos))
+        this.obtener_productos()
     
-
-
+    }
 
 
 

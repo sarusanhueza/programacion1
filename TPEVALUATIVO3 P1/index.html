@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tpEvalativo3</title>
     <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" href="bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="bootstrap.bundle.min.js"></script>
 </head>
 <body>
     <nav class="navbar" style="background-color:rgb(41, 40, 40)">
@@ -28,7 +29,7 @@
                 <div class="mb-4">
                         <input id="d" class="form-control" placeholder="detalles" type="text"></div>
                 <div class="mb-4">
-                    <select id="S" class="form-select">
+                    <select id="C" class="form-select">
                         <option selected>categorias</option>
                         <option value="a">instrumentos</option>
                         <option value="b">amplificadores</option>
@@ -49,16 +50,40 @@
                                 <th style="color:azure ;">Imagen</th>
                                 <th style="color:azure ;">Detalles</th>
                                 <th style="color:azure ;">Categoria</th>
+                                <th style="color:azure ;">Edicion</th>
+
                             </tr>
                         </thead>
                         <tbody id="table" style="color:azure;"></tbody>
                     </table>
             </div>
         </div>
+
+                
                 <button id = "parche" type="button" class="btn btn-dark">Guardar</button>
 
  </div>
 
+  <div class="modal fade" id="MODAL" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">ELIMINACION</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>
+            ¿Esta seguro de eliminar el producto?
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CERRAR</button>
+          <button id="bpton" type="button" class="btn btn-danger">ELIMINAR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="mas.js"></script>
     <script src="main.js" type="module"></script>
 </body>
 </html>
