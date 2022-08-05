@@ -29,6 +29,11 @@ function eliminar(){
     p.eliminar_producto()
 }
 
+function actualizar(){
+    let producto = new Elementos()
+    producto.actualizar_producto()
+}
+document.getElementById("parche2").addEventListener("click",actualizar)
 
 
 

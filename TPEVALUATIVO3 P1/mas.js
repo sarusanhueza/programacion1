@@ -9,7 +9,10 @@ function editar(indice){
    document.getElementById("d").value = lista[indice].Detalles
    document.getElementById("C").value = lista[indice].Categoria
 
+    document.getElementById("parche").style.display = 'none'
+    document.getElementById("parche2").style.display = 'block'
 
+        localStorage.setItem("apple", indice)
 
 
 }

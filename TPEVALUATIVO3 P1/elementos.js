@@ -83,6 +83,23 @@ export default class Elementos{
     
     }
 
+    actualizar_producto(){
+        let indice = localStorage.getItem("apple")
+        let listaa = JSON.parse(localStorage.getItem("elementillo"))
+        listaa[indice].Descripcion = document.getElementById("D").value
+        listaa[indice].Precio = document.getElementById("P").value
+        listaa[indice].Imagen = document.getElementById("I").value
+        listaa[indice].Detalles = document.getElementById("d").value
+        listaa[indice].Categoria = document.getElementById("C").value
+
+        localStorage.setItem("elementillo", JSON.stringify(listaa))
+        this.obtener_productos()
+        document.getElementById("parche").style.display = 'block'
+        document.getElementById("parche2").style.display = 'none'
+
+
+    }
+
 
 
 }
