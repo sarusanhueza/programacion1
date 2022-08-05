@@ -14,7 +14,6 @@ function guardar(){
 
 }
 
-
 document.getElementById("parche").addEventListener("click", guardar)
 
 function obtener(){
@@ -23,9 +22,16 @@ function obtener(){
 }
 obtener()
 
+
+
 function eliminar(){
     let p = new Elementos()
     p.eliminar_producto()
 }
+
+
+
+
+
 
 document.getElementById("bpton").addEventListener("click", eliminar)
