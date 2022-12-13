@@ -16,38 +16,36 @@
 
     <div class="container mt-3">
       <div class="row">
-        <div class="col-lg-10">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="col-12">
-                <div>
-                  <h5>ingresar datos de velocidad inicial y altura</h5>
-                  <div class="mt-3">
-                    <label class="form-label" form=""
-                      >velocidad inicial (vi)</label
-                    >
-                    <input
-                      class="form-control"
-                      type="text"
-                      placeholder="ingrese dato"
-                    />
-                  </div>
-                  <div class="mt-3">
-                    <label class="form-label" form="">altura (h)</label>
-                    <input
-                      class="form-control"
-                      type="text"
-                      placeholder="ingrese dato"
-                    />
-                    <br />
-                    <button id="manteca" class="btn btn-primary">
-                      Calcular Velocidad Final
-                    </button>
-                  </div>
-                </div>
-              </div>
+        <div class="col-lg-6">
+          <div>
+            <h5>ingresar datos de velocidad inicial y altura</h5>
+            <div class="mt-3">
+              <label class="form-label" form="">velocidad inicial (vi)</label>
+              <input
+                id="vi"
+                class="form-control"
+                type="number"
+                placeholder="ingrese dato"
+              />
+            </div>
+            <div class="mt-3">
+              <label class="form-label" form="">altura (h)</label>
+              <input
+                id="h"
+                class="form-control"
+                type="number"
+                placeholder="ingrese dato"
+              />
+              <br />
+              <button id="manteca" class="btn btn-primary">
+                Calcular Velocidad Final
+              </button>
             </div>
           </div>
+        </div>
+        <div class="col-lg-6">
+          <h5>Resultado Final</h5>
+          <p id="pan"></p>
         </div>
       </div>
     </div>
